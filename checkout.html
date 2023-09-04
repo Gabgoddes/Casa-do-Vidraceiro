@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0">
+  <title>Casa do Vidraceiro</title>
+  <link rel="stylesheet"
+  href="./style.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  />
+</head>
+
+<body class="h-screen">
+  <header
+  class="flex bg-yellow-400 p-4 justify-between shadow-xl">
+  <a href="/">
+    <img
+      class="h-12"
+      src="./assets/imagens/logo CASA DO VIDRACEIRO-02.png"
+      alt="Logo da Casa do Vidraceiro."
+      />
+  </a>
+  </header>
+  <form class="flex w-100 px-5 gap-6 py-10 grow">
+    <section id="dados-usuario" class="w-1/3 bg-slate-100 rounded-xl py-5">
+        <p class="mb-5 text-center font-bold">Seus Dados</p>
+        <div class="flex flex-col px-10 py-3">
+            <label for="nome" class="font-bold text-sm mb-2">Nome</label>
+            <input type="text" id="nome" class="border-solid border-2 rounded-lg px-2 py-1" placeholder="Nome Completo" required>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+            <label for="nome" class="font-bold text-sm mb-2">Email</label>
+            <input type="email" id="email" class="border-solid border-2 rounded-lg px-2 py-1" placeholder="casadovidraceiro@gmail.com" required>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+            <label for="nome" class="font-bold text-sm mb-2">Telefone</label>
+            <input type="tel" id="telefone" class="border-solid border-2 rounded-lg px-2 py-1" placeholder="82 3325-3997" required>
+        </div>
+
+    </section>
+    
+    <section id="pagamento-entrega" class="w-1/3 bg-slate-100 rounded-xl py-5">
+        <p class="mb-5 text-center font-bold">Dados Para Pagamento</p>
+        <div class="flex flex-col px-10 py-3">
+            <label 
+            for="numero-cartao" 
+            class="font-bold text-sm mb-2">Número do Cartão</label>
+            <input 
+            type="text" 
+            id="cartao" 
+            class="border-solid border-2 rounded-lg px-2 py-1" 
+            placeholder="1111 1111 1111 1111" 
+            required>
+        </div>
+
+    <div class="flex">
+        <div class="flex flex-col px-10 py-3 w-1/2">
+            <label 
+            for="cvv" 
+            class="font-bold text-sm mb-2">CVV</label>
+            <input 
+            type="text" 
+            id="cvv" 
+            class="border-solid border-2 rounded-lg px-2 py-1" 
+            placeholder="111" 
+            required>
+        </div>
+
+        <div class="flex flex-col px-10 py-3 w-1/2">
+            <label 
+            for="validade-cartao" 
+            class="font-bold text-sm mb-2">Data de Validade</label>
+            <input 
+            type="text" 
+            id="validade-cartao" 
+            class="border-solid border-2 rounded-lg px-2 py-1" 
+            placeholder="11/29" 
+            required>
+        </div>
+
+    </div>
+
+    <div class="flex flex-col px-10 py-3">
+        <label 
+        for="endereco" 
+        class="font-bold text-sm mb-2">Endereço de entrega</label>
+        <input 
+        type="text" 
+        id="endereco" 
+        class="border-solid border-2 rounded-lg px-2 py-1" 
+        placeholder="Av. Dona Constança de Goes Monteiro" 
+        required>
+    </div>
+
+    <div class="flex">
+        <div class="flex flex-col px-10 py-3 w-1/2">
+            <label 
+            for="cep" 
+            class="font-bold text-sm mb-2">CEP</label>
+            <input 
+            type="text" 
+            id="cep" 
+            class="border-solid border-2 rounded-lg px-2 py-1" 
+            placeholder="57025-148" 
+            required>
+        </div>
+
+        <div class="flex flex-col px-10 py-3 w-1/2">
+            <label 
+            for="numero-casa" 
+            class="font-bold text-sm mb-2">Número</label>
+            <input 
+            type="text" 
+            id="numero-casa" 
+            class="border-solid border-2 rounded-lg px-2 py-1" 
+            placeholder="148" 
+            required>
+        </div>
+
+    </div>
+
+    <div class="flex flex-col px-10 py-3">
+        <label 
+        for="referencia" 
+        class="font-bold text-sm mb-2">Ponto de Referência</label>
+        <input 
+        type="text" 
+        id="referencia" 
+        class="border-solid border-2 rounded-lg px-2 py-1" 
+        placeholder="Em frente a Vidraçaria Rochedo e ao Lado do Mundo Pet" 
+        required>
+    </div>
+
+    </section>
+    
+    <section
+    id="produtos-checkout"
+    class="w-1/3 bg-slate-100 rounded-xl py-5">
+        <section
+            id="container-produtos-checkout"
+            class="h-4/5 overflow-y-auto p-4">
+        </section>
+
+        <section
+            id="celula-checkout"
+            class="flex flex-col px-2 1/5 justify-around">
+            <p 
+            id="preco-total" 
+            class="border-solid border-2 rounded-lg px-2 py-1 bg-white">
+            Total: R$</p>
+      <button id="finalizarCompraPedidos"
+      class="border-solid border-2 rounded-lg px-2 py-1 bg-white hover:bg-yellow-800 hover:text-white hover:font-bold"
+      type='submit'>
+        Finalizar Compra</button>
+        </section>
+
+    </section>
+
+  </form>
+<script src="./checkout.js" type="module"></script>
+</body>
+
+</html>

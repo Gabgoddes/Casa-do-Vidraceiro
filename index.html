@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0">
+  <title>Casa do Vidraceiro</title>
+  <link rel="stylesheet"
+  href="./style.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  />
+</head>
+
+<body class="h-screen">
+  <section id="carrinho"
+  class= "fixed top-0 right-[-340px] bg-yellow-400 h-screen w-[340px] text-white duration-200 border-l border-yellow-800 p-5 flex flex-col justify-between z-10">
+    <div id="cabecalho-carrinho" class="flex justify-between m-4 text-lg">
+      <p>Meu Carrinho</p>
+      <button id="fechar-carrinho" class="hover:text-yellow-800"><i class="fa-solid fa-circle-xmark"></i></button>
+    </div>
+    <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2"></section>
+    <section>
+      <p id="preco-total" class="bg-yellow-400 text-slate-800 rounded-sm text-xl pl-5">Total: R$</p>
+      <button
+      id="finalizaCompra"
+      class="items-center border-solid z-2 w-48 m-2 text-slate-800 text-xl bg-white flex px-5 flex-col pb-2 justify-between shadow-xl shadow-slate-700 rounded-lg hover:bg-yellow-800 hover:text-white">
+        Finalizar Compra</button>
+    </section>
+  </section>
+  <header
+  class="flex bg-yellow-400 p-4 justify-between shadow-xl">
+  <a href="/">
+  <img
+    class="h-12"
+    src="./assets/imagens/logo CASA DO VIDRACEIRO-02.png"
+    alt="Logo da Casa do Vidraceiro."
+    />
+</a>
+    <div class="text-white flex gap-8 items-end mx-4">
+     <a href="/pedidos.html">
+      <button><i class="fa-solid fa-user"></i></button>
+    </a>
+
+      <button id="abrir-carrinho" class="hover:text-yellow-800">
+        <i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+  </header>
+
+  <main class="flex flex-col items-center">
+    <section id="filtros" class="p-10 flex">
+      <div class="px-2">
+      <input 
+      id="exibir-todos" 
+      type="radio" 
+      name="filtros" 
+      class="peer hidden" 
+      checked>
+      
+      <label 
+      for="exibir-todos" 
+      class="peer-checked:bg-blue-800 peer-checked:font-bold peer-checked:text-white p-2 rounded-lg select-none cursor-pointer">Todos
+    </label>
+    
+  </div>
+    <div class="px-2">
+      <input 
+      id="exibir-ferragem" 
+      type="radio" name="filtros" 
+      class="peer hidden">
+      <label 
+      for="exibir-ferragem" 
+      class="peer-checked:bg-blue-800 peer-checked:font-bold peer-checked:text-white p-2 rounded-lg select-none cursor-pointer">Ferragens
+    </label>
+    
+  </div>
+    <div class="px-2">
+      <input 
+      id="exibir-acessorio" 
+      type="radio" name="filtros" 
+      class="peer hidden">
+      <label 
+      for="exibir-acessorio" 
+      class="peer-checked:bg-blue-800 peer-checked:font-bold peer-checked:text-white p-2 rounded-lg select-none cursor-pointer">Acessórios
+    </label>
+    
+  </div>
+
+    </section>
+    <section id="container-produto" class="flex flex-wrap"></section>
+  </main>
+<script type="module" src="./main.js"></script>
+</body>
+
+</html>
